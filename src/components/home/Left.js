@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { BsCloudLightningFill, BsFacebook } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -6,11 +6,19 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { SiYoutubemusic } from "react-icons/si";
 import { FiInstagram, FiMail, FiSend } from "react-icons/fi";
 import CV from "../../assets/Noor_Mohammad_resume.pdf";
-import { bannerImg } from "../../assets/index";
+import MR2 from "../../assets/MR2.jpeg";
 
 const Left = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.open("https://github.com/marcelorcramos", "_blank");
+      window.open("https://www.linkedin.com/in/marcelorcramos/", "_blank");
+      window.open("mailto:marcelorcramos@gmail.com", "_blank");
+    }, 1000);
+  }, []);
+
   const [text] = useTypewriter({
-    words: ["Mobile Developer", "Full-Stack Web Development", "DataBase Management"],
+    words: ["Mobile Developer", "Full-Stack Web Developer", "DataBase Management"],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
@@ -21,7 +29,7 @@ const Left = () => {
       <div className="w-full h-3/5">
         <img
           className="w-full h-full object-cover rounded-2xl"
-          src={bannerImg}
+          src={MR2}
           loading="priority"
           alt="bannerImage"
         />
@@ -34,15 +42,15 @@ const Left = () => {
             <Cursor cursorBlinking="false" cursorStyle="|" />
           </p>
           <div className="flex justify-center gap-2 mt-2">
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+            <a href="https://github.com/marcelorcramos" target="_blank" rel="noopener noreferrer" className="hover:text-designColor duration-300 cursor-pointer text-xl">
               <FaGithub />
-            </span>
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+            </a>
+            <a href="https://www.linkedin.com/in/marcelorcramos/" target="_blank" rel="noopener noreferrer" className="hover:text-designColor duration-300 cursor-pointer text-xl">
               <FaLinkedin />
-            </span>
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+            </a>
+            <a href="mailto:marcelorcramos@gmail.com" className="hover:text-designColor duration-300 cursor-pointer text-xl">
               <FiMail />
-            </span>
+            </a>
           </div>
         </div>
         <div className="flex h-14">
