@@ -19,7 +19,7 @@ const Sidenav = () => {
       </ul>
       <SidenavTitle title="R" subTitle="each Me" />
       <ul>
-        <li className="sidenavLi">+351</li>
+        <li className="sidenavLi">+351 *** *** ***</li>
         <li className="sidenavLi">marcelorcramos@gmail.com</li>
       </ul>
     </div>
