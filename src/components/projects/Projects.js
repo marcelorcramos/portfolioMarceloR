@@ -8,6 +8,15 @@ import {
   workImgSix,
   workImgSeven,
   workImgEight,
+  VexApp,
+  WeatherApp,
+  FinanceControl,
+  Finance,
+  Weather,
+  chargerapp,
+  Crud,
+  Scraper,
+  scraper,
 } from "../../assets";
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
@@ -19,46 +28,36 @@ const Projects = () => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 lgl:gap-10">
         <div className="px-6">
           <ProjectsCard
-            title="Blog Website"
-            category="Website"
-            image={workImgThree}
+            title="VEX APP"
+            category="Android App (GoogleMaps API)"
+            image={chargerapp}
           />
           <ProjectsCard
-            title="Business Card Design"
-            category="Design"
-            image={workImgOne}
+            title="Weather App"
+            category="iOS App (OpenWeatherApi)"
+            image={Weather}
           />
           <ProjectsCard
-            title="Infinity Logo"
-            category="Logo"
-            image={workImgTwo}
-          />
-          <ProjectsCard
-            title="Mobile Application"
-            category="Shopping"
-            image={workImgFive}
+            title="Contact List (CRUD)"
+            category="Android App (SQLITE & Firebase)"
+            image={Crud}
           />
         </div>
         <div className="px-6">
           <ProjectsCard
-            title="Responsive website"
-            category="E-commerce"
-            image={workImgFour}
+            title="Finance Control"
+            category="React.js Website"
+            image={Finance}
           />
           <ProjectsCard
-            title="Grapic Design"
-            category="Design"
-            image={workImgSix}
+            title="Github Scraper"
+            category="Gui Python"
+            image={scraper}
           />
           <ProjectsCard
-            title="Ideas & Blog"
+            title="Projeto Centro De Saúde"
             category="Website"
             image={workImgEight}
-          />
-          <ProjectsCard
-            title="ZOSS Logo"
-            category="Logo"
-            image={workImgSeven}
           />
         </div>
       </div>

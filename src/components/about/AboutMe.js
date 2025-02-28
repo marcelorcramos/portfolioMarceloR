@@ -7,7 +7,7 @@ const AboutMe = () => {
         <div className="py-6">
           <h2 className="font-semibold mb-1">Hello! I'm  Marcelo Ramos</h2>
           <p className="text-base leading-6 ">
-            App/Web developer from Brazil, Rio de Janeiro. I have great experience in app development, 
+            Software Engineer from Brazil, Rio de Janeiro. I have great experience in app development, 
             I also consider myself excellent and I get great website tools.
           </p>
         </div>

@@ -5,7 +5,7 @@ const ResumeCard = ({ badge, title, subTitle, des }) => {
     <div className="w-full py-6 flex flex-col gap-2.5 border-b-[1px] border-b-zinc-800">
       {badge === "" ? (
         <h6 className="w-28 text-center text-sm py-[1px] text-designColor border-[1px] border-designColor rounded-sm">
-          2013-Present
+          2024-Present
         </h6>
       ) : (
         <h6 className="w-24 text-center text-sm py-[1px] text-[#999] border-[1px] border-zinc-600 rounded-sm">
