@@ -2,7 +2,7 @@
 
 ## 🚀 Marcelo Ramos Portfolio
 
-🔗 **Access the website here:** [Portfolio Marcelo R.](www.marceloramos.pt)
+🔗 **Access the website here:** [Portfolio Marcelo R.](https://marceloramos.pt)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
