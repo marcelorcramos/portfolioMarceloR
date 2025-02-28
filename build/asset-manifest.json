@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolioMarceloR/static/css/main.2ee89c1d.css",
-    "main.js": "/portfolioMarceloR/static/js/main.76c378af.js",
+    "main.css": "/portfolioMarceloR/static/css/main.50fabb79.css",
+    "main.js": "/portfolioMarceloR/static/js/main.268b6836.js",
     "static/media/MR2.jpeg": "/portfolioMarceloR/static/media/MR2.8b69290931367adcf081.jpeg",
     "static/media/chargerapp.png": "/portfolioMarceloR/static/media/chargerapp.eef39d8f92ea6e1f899d.png",
     "static/media/CV-MarceloRamos.pdf": "/portfolioMarceloR/static/media/CV-MarceloRamos.160353011376d80cc77d.pdf",
@@ -23,11 +23,11 @@
     "static/media/Weather.jpg": "/portfolioMarceloR/static/media/Weather.ec9e1e62691185f02e94.jpg",
     "static/media/Crud.webp": "/portfolioMarceloR/static/media/Crud.ac893c9f969330893995.webp",
     "index.html": "/portfolioMarceloR/index.html",
-    "main.2ee89c1d.css.map": "/portfolioMarceloR/static/css/main.2ee89c1d.css.map",
-    "main.76c378af.js.map": "/portfolioMarceloR/static/js/main.76c378af.js.map"
+    "main.50fabb79.css.map": "/portfolioMarceloR/static/css/main.50fabb79.css.map",
+    "main.268b6836.js.map": "/portfolioMarceloR/static/js/main.268b6836.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ee89c1d.css",
-    "static/js/main.76c378af.js"
+    "static/css/main.50fabb79.css",
+    "static/js/main.268b6836.js"
   ]
 }
