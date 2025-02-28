@@ -17,6 +17,7 @@ import {
   Crud,
   Scraper,
   scraper,
+  CentroSaude,
 } from "../../assets";
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
@@ -57,7 +58,7 @@ const Projects = () => {
           <ProjectsCard
             title="Projeto Centro De Saúde"
             category="Website"
-            image={workImgEight}
+            image={CentroSaude}
           />
         </div>
       </div>

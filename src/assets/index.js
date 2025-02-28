@@ -15,9 +15,7 @@ import Weather from "./work/Weather.jpg";
 import scraper from "./work/scraper.png";
 import Crud from "./work/Crud.webp";
 import Finance from "./work/finance.png";
-import blogImgOne from "./blog/blogImgOne.jpg";
-import blogImgTwo from "./blog/blogImgTwo.jpg";
-import blogImgThree from "./blog/blogImgThree.jpg";
+import CentroSaude from "./work/CS.png";
 
 
 export { 
@@ -30,9 +28,6 @@ export {
     workImgSix,
     workImgSeven,
     workImgEight,
-    blogImgOne,
-    blogImgTwo,
-    blogImgThree,
     VexApp,
     WeatherApp,
     FinanceControl,
@@ -40,5 +35,6 @@ export {
     Weather,
     scraper,
     Crud,
-    Finance
+    Finance,
+    CentroSaude
 };
