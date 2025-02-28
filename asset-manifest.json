@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/portfolioMarceloR/static/css/main.2ee89c1d.css",
+    "main.js": "/portfolioMarceloR/static/js/main.76c378af.js",
+    "static/media/MR2.jpeg": "/portfolioMarceloR/static/media/MR2.8b69290931367adcf081.jpeg",
+    "static/media/chargerapp.png": "/portfolioMarceloR/static/media/chargerapp.eef39d8f92ea6e1f899d.png",
+    "static/media/CV-MarceloRamos.pdf": "/portfolioMarceloR/static/media/CV-MarceloRamos.160353011376d80cc77d.pdf",
+    "static/media/workImgEight.jpg": "/portfolioMarceloR/static/media/workImgEight.863efcb32ba563410bd6.jpg",
+    "static/media/workImgSeven.jpg": "/portfolioMarceloR/static/media/workImgSeven.b607849747fc53f9a1c1.jpg",
+    "static/media/VexApp.png": "/portfolioMarceloR/static/media/VexApp.4e18ebb32ecfed7f29f4.png",
+    "static/media/workImgThree.jpg": "/portfolioMarceloR/static/media/workImgThree.f617087bdf72ace764ea.jpg",
+    "static/media/workImgFive.jpg": "/portfolioMarceloR/static/media/workImgFive.7e88cef06bfeb0835605.jpg",
+    "static/media/FinanceControl.png": "/portfolioMarceloR/static/media/FinanceControl.bb67274acc53e97ebf9e.png",
+    "static/media/workImgTwo.jpg": "/portfolioMarceloR/static/media/workImgTwo.7433873bf3c337c65ffc.jpg",
+    "static/media/workImgSix.jpg": "/portfolioMarceloR/static/media/workImgSix.d899a4337fada00f42a3.jpg",
+    "static/media/WeatherApp.png": "/portfolioMarceloR/static/media/WeatherApp.24e781eca8ec87897390.png",
+    "static/media/workImgFour.jpg": "/portfolioMarceloR/static/media/workImgFour.10ddd9b44b0d0802f131.jpg",
+    "static/media/finance.png": "/portfolioMarceloR/static/media/finance.91ea0d5cf7c9a2052da9.png",
+    "static/media/workImgOne.jpg": "/portfolioMarceloR/static/media/workImgOne.294921da5954189699c7.jpg",
+    "static/media/CS.png": "/portfolioMarceloR/static/media/CS.7102a00d27d4500473b6.png",
+    "static/media/scraper.png": "/portfolioMarceloR/static/media/scraper.36b3e1c1ad53a5c40acb.png",
+    "static/media/bannerImg.png": "/portfolioMarceloR/static/media/bannerImg.04c7eea2434b8bc9ad3c.png",
+    "static/media/Weather.jpg": "/portfolioMarceloR/static/media/Weather.ec9e1e62691185f02e94.jpg",
+    "static/media/Crud.webp": "/portfolioMarceloR/static/media/Crud.ac893c9f969330893995.webp",
+    "index.html": "/portfolioMarceloR/index.html",
+    "main.2ee89c1d.css.map": "/portfolioMarceloR/static/css/main.2ee89c1d.css.map",
+    "main.76c378af.js.map": "/portfolioMarceloR/static/js/main.76c378af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ee89c1d.css",
+    "static/js/main.76c378af.js"
+  ]
+}
