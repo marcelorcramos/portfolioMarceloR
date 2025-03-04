@@ -39,17 +39,18 @@ const Education = () => {
           subTitle="CTeSP APP Development"
           des="I'm currently at ISTEC, on the App Development course."
         />
-        <ResumeCard
-          badge="2012 - 2020"
-          title="CNA BRAZIL"
-          subTitle="English Course"
-          des="After 8 years I finished the English language course at CNA BRAZIL"
-        />
+        
         <ResumeCard
           badge="2021 - 2023"
           title="Escola Secundária Rainha Dona Leonor"
           subTitle="Secondary vocational education, IT technician and systems"
           des="I finished my secondary education at AERDL, on the technical professional course in IT and systems"
+        />
+        <ResumeCard
+          badge="2012 - 2020"
+          title="CNA BRAZIL"
+          subTitle="English Course"
+          des="After 8 years I finished the English language course at CNA BRAZIL"
         />
       </div>
     </div>

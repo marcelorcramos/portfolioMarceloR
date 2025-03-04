@@ -12,7 +12,7 @@ const FunFact = () => {
       <FunFactCard icon={<SiAntdesign />} des="10 Finished Projects" />
       <FunFactCard icon={<BiCodeAlt />} des="APP/Web/
       API/DataBase" />
-      <FunFactCard icon={<IoLogoYoutube />} des="" />
+      <FunFactCard icon={<IoLogoYoutube />} des="+ 10 complete online courses" />
     </div>
   );
 };
