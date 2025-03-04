@@ -39,7 +39,6 @@ const Education = () => {
           subTitle="CTeSP APP Development"
           des="I'm currently at ISTEC, on the App Development course."
         />
-        
         <ResumeCard
           badge="2021 - 2023"
           title="Escola Secundária Rainha Dona Leonor"
