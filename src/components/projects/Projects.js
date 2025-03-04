@@ -32,16 +32,19 @@ const Projects = () => {
             title="VEX APP"
             category="Android App (GoogleMaps API)"
             image={chargerapp}
+            link="https://github.com/marcelorcramos/VexApp"
           />
           <ProjectsCard
             title="Weather App"
             category="iOS App (OpenWeatherApi)"
             image={Weather}
+            link="https://github.com/marcelorcramos/WeatherApp"
           />
           <ProjectsCard
             title="Contact List (CRUD)"
             category="Android App (SQLITE & Firebase)"
             image={Crud}
+            link="https://github.com/marcelorcramos/ContactList-CRUD"
           />
         </div>
         <div className="px-6">
@@ -49,16 +52,19 @@ const Projects = () => {
             title="Finance Control"
             category="React.js Website"
             image={Finance}
+            link="https://github.com/marcelorcramos/FinanceControl-React.Js"
           />
           <ProjectsCard
             title="Github Scraper"
             category="Gui Python"
             image={scraper}
+            link="https://github.com/marcelorcramos/Github-Scraper-PY"
           />
           <ProjectsCard
             title="Projeto Centro De Saúde"
             category="Website"
             image={CentroSaude}
+            link="https://github.com/marcelorcramos/ProjetoCentroDeSaude"
           />
         </div>
       </div>
