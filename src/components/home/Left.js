@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { SiYoutubemusic } from "react-icons/si";
 import { FiInstagram, FiMail, FiSend } from "react-icons/fi";
-import CV from /public/CV-MarceloRamosENG.pdf;
+import CV from "../../assets/CV-MarceloRamosENG.pdf";
 import MR2 from "../../assets/MR2.jpeg";
 
 const Left = () => {
@@ -54,9 +54,10 @@ const Left = () => {
           </div>
         </div>
         <div className="flex h-14">
-                  <a
-            href="/CV-MarceloRamosENG.pdf"
-            className="w-1/2 border-t-[1px] borderRight border-t-zinc-800 text-sm tracking-wide uppercase gap-2 hover:text-designColor duration-300"
+          <a
+            href={CV}
+            target="_blank"
+            className="w-1/2 border-t-[1px] borderRight border-t-zinc-800 text-sm tracking-wide uppercase  gap-2 hover:text-designColor duration-300"
             rel="noreferrer"
             download
           >
