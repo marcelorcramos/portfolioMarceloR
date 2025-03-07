@@ -17,33 +17,38 @@ const Sidenav = () => {
       </a>
       </li>
       <li className="sidenavLi">
-      <a href="https://github.com/marcelorcramos/VexApp" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/marcelorcramos/WeatherApp" target="_blank" rel="noopener noreferrer">
         Weather APP
       </a>
       </li>
       <li className="sidenavLi">
-      <a href="https://github.com/marcelorcramos/VexApp" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/marcelorcramos/FinanceControl-React.Js" target="_blank" rel="noopener noreferrer">
         Finance Control
       </a>
       </li>
       <li className="sidenavLi">
-      <a href="https://github.com/marcelorcramos/VexApp" target="_blank" rel="noopener noreferrer">
-        VEX APP
+      <a href="https://github.com/marcelorcramos/ContactList-CRUD" target="_blank" rel="noopener noreferrer">
+        Contact List (CRUD)
       </a>
       </li>
       <li className="sidenavLi">
-      <a href="https://github.com/marcelorcramos/VexApp" target="_blank" rel="noopener noreferrer">
-        VEX APP
+      <a href="https://github.com/marcelorcramos/Github-Scraper-PY" target="_blank" rel="noopener noreferrer">
+      Github Scraper
       </a>
       </li>
       <li className="sidenavLi">
-      <a href="https://github.com/marcelorcramos/VexApp" target="_blank" rel="noopener noreferrer">
-        VEX APP
+      <a href="https://github.com/marcelorcramos/ProjetoCentroDeSaude" target="_blank" rel="noopener noreferrer">
+      Projeto Centro De Saúde
       </a>
       </li>
       </ul>
       <SidenavTitle title="R" subTitle="each Me" />
       <ul>
+      <li className="sidenavLi">
+      <a href="https://www.marceloramos.pt" target="_blank" rel="noopener noreferrer">
+      www.marceloramos.pt
+      </a>
+      </li>
         <li className="sidenavLi">+351 *** *** ***</li>
         <li className="sidenavLi">marcelorcramos@gmail.com</li>
       </ul>
