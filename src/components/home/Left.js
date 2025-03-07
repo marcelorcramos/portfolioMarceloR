@@ -54,10 +54,9 @@ const Left = () => {
           </div>
         </div>
         <div className="flex h-14">
-          <a
-            href={CV}
-            target="_blank"
-            className="w-1/2 border-t-[1px] borderRight border-t-zinc-800 text-sm tracking-wide uppercase  gap-2 hover:text-designColor duration-300"
+                  <a
+            href="/CV-MarceloRamosENG.pdf"
+            className="w-1/2 border-t-[1px] borderRight border-t-zinc-800 text-sm tracking-wide uppercase gap-2 hover:text-designColor duration-300"
             rel="noreferrer"
             download
           >
