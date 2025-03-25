@@ -16,6 +16,7 @@ import scraper from "./work/scraper.png";
 import Crud from "./work/Crud.webp";
 import Finance from "./work/finance.png";
 import CentroSaude from "./work/CS.png";
+import ConsumoEnergia from "./work/consumoEnergia.png";
 
 
 export { 
@@ -36,5 +37,6 @@ export {
     scraper,
     Crud,
     Finance,
-    CentroSaude
+    CentroSaude,
+    ConsumoEnergia
 };

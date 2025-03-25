@@ -18,7 +18,7 @@ import {
   Scraper,
   scraper,
   CentroSaude,
-  ConsumoDeEnergia
+  ConsumoEnergia
 } from "../../assets";
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
@@ -70,7 +70,7 @@ const Projects = () => {
           <ProjectsCard
             title="Consumo de Energia"
             category="Website Responsivo"
-            image={CentroSaude}
+            image={ConsumoEnergia}
             link="https://github.com/marcelorcramos/ConsumoDeEnergia"
           />
         </div>
