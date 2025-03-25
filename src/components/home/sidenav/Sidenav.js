@@ -41,6 +41,11 @@ const Sidenav = () => {
       Projeto Centro De Saúde
       </a>
       </li>
+      <li className="sidenavLi">
+      <a href="https://github.com/marcelorcramos/ConsumoDeEnergia" target="_blank" rel="noopener noreferrer">
+      Consumo de Energia
+      </a>
+      </li>
       </ul>
       <SidenavTitle title="R" subTitle="each Me" />
       <ul>
