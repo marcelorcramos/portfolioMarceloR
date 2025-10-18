@@ -18,7 +18,8 @@ import {
   Scraper,
   scraper,
   CentroSaude,
-  ConsumoEnergia
+  ConsumoEnergia,
+  tvshowtracker
 } from "../../assets";
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
@@ -29,6 +30,12 @@ const Projects = () => {
       <Title title="Recent" subTitle="Projects" />
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 lgl:gap-10">
         <div className="px-6">
+        <ProjectsCard
+            title="TV Show Tracker"
+            category="Website with API"
+            image={tvshowtracker}
+            link="https://github.com/marcelorcramos/TekeverProject.git"
+          />
           <ProjectsCard
             title="VEX APP"
             category="Android App (GoogleMaps API)"
