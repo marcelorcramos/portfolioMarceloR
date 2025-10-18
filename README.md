@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 ## 🚀 Marcelo Ramos Portfolio
 
 🔗 **Access the website here:** [Portfolio Marcelo R.](https://marceloramos.pt)
