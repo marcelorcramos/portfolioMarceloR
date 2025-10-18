@@ -17,6 +17,7 @@ import Crud from "./work/Crud.webp";
 import Finance from "./work/finance.png";
 import CentroSaude from "./work/CS.png";
 import ConsumoEnergia from "./work/consumoEnergia.png";
+import tvshowtracker from "./work/tvshowtracker.webp";
 
 
 export { 
@@ -38,5 +39,6 @@ export {
     Crud,
     Finance,
     CentroSaude,
-    ConsumoEnergia
+    ConsumoEnergia,
+    tvshowtracker
 };
