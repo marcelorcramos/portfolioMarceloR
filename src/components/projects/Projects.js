@@ -39,7 +39,7 @@ const Projects = () => {
           />
         <ProjectsCard
             title="TV Show Tracker"
-            category="API Fullstack WebApp"
+            category="API builded with .NET + Fullstack WebApp"
             image={tvshowtracker}
             link="https://github.com/marcelorcramos/TV-Show-Tracker"
           />
