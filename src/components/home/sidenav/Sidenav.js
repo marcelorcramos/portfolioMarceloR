@@ -12,7 +12,7 @@ const Sidenav = () => {
         <SidenavTitle title="P" subTitle="rojects" />
       <ul>
       <li className="sidenavLi">
-      <a href="https://github.com/marcelorcramos/TekeverProject.git" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/marcelorcramos/TV-Show-Tracker" target="_blank" rel="noopener noreferrer">
         TV Show Tracker
       </a>
       </li>
