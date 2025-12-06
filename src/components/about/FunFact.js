@@ -9,7 +9,7 @@ const FunFact = () => {
   return (
     <div className="px-0 grid grid-cols-2 md:grid-cols-4 pb-10">
       <FunFactCard icon={<BsTrophyFill />} des="More than 7 code languages." />
-      <FunFactCard icon={<SiAntdesign />} des="10 Finished Projects" />
+      <FunFactCard icon={<SiAntdesign />} des="20 Finished Projects" />
       <FunFactCard icon={<BiCodeAlt />} des="APP/Web/
       API/DataBase" />
       <FunFactCard icon={<IoLogoYoutube />} des="+ 10 complete online courses" />
