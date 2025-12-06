@@ -18,6 +18,7 @@ import Finance from "./work/finance.png";
 import CentroSaude from "./work/CS.png";
 import ConsumoEnergia from "./work/consumoEnergia.png";
 import tvshowtracker from "./work/tvshowtracker.png";
+import smarttodoapp from "./work/smarttodoapp.webp"
 
 
 export { 
@@ -40,5 +41,6 @@ export {
     Finance,
     CentroSaude,
     ConsumoEnergia,
-    tvshowtracker
+    tvshowtracker,
+    smarttodoapp
 };
