@@ -33,7 +33,7 @@ const Projects = () => {
         <div className="px-6">
         <ProjectsCard
             title="Smart To Do App"
-            category="To do App with Kanban Board for developers and managers"
+            category="Kanban Board for developers and managers"
             image={smarttodoapp}
             link="https://github.com/JoaoPiedade07/todoapp"
           />
