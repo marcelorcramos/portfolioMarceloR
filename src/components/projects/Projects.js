@@ -33,13 +33,13 @@ const Projects = () => {
         <div className="px-6">
         <ProjectsCard
             title="Smart To Do App"
-            category="Kanban Board for developers and managers"
+            category="Typescript + React.js Kanban Board"
             image={smarttodoapp}
             link="https://github.com/JoaoPiedade07/todoapp"
           />
         <ProjectsCard
             title="TV Show Tracker"
-            category="Website with API"
+            category="API Fullstack WebApp"
             image={tvshowtracker}
             link="https://github.com/marcelorcramos/TV-Show-Tracker"
           />
@@ -65,25 +65,25 @@ const Projects = () => {
         <div className="px-6">
           <ProjectsCard
             title="Finance Control"
-            category="React.js Website"
+            category="React.js Web App"
             image={Finance}
             link="https://github.com/marcelorcramos/FinanceControl-React.Js"
           />
           <ProjectsCard
             title="Github Scraper"
-            category="Gui Python"
+            category="Gui + Python"
             image={scraper}
             link="https://github.com/marcelorcramos/Github-Scraper-PY"
           />
           <ProjectsCard
             title="Projeto Centro De Saúde"
-            category="Website"
+            category="LocalStorage Js Website"
             image={CentroSaude}
             link="https://github.com/marcelorcramos/ProjetoCentroDeSaude"
           />
           <ProjectsCard
             title="Consumo de Energia"
-            category="Website Responsivo"
+            category="Web App"
             image={ConsumoEnergia}
             link="https://github.com/marcelorcramos/ConsumoDeEnergia"
           />
