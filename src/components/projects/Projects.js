@@ -34,7 +34,7 @@ const Projects = () => {
             title="TV Show Tracker"
             category="Website with API"
             image={tvshowtracker}
-            link="https://github.com/marcelorcramos/TekeverProject.git"
+            link="https://github.com/marcelorcramos/TV-Show-Tracker"
           />
           <ProjectsCard
             title="VEX APP"
