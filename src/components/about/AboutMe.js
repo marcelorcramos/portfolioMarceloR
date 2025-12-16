@@ -7,8 +7,7 @@ const AboutMe = () => {
         <div className="py-6">
           <h2 className="font-semibold mb-1">Hello! I'm  Marcelo Ramos</h2>
           <p className="text-base leading-6 ">
-            Software Engineer from Brazil, Rio de Janeiro. I have great experience in app development, 
-            I also consider myself excellent and I get great website tools.
+          Brazilian-Portuguese Software Developer currently based in Lisbon. With a background in backend, I am proficient in technologies such as C#, Python, and Java, and on the frontend, I have a strong affinity for React and TypeScript. My experience spans various databases, both relational (SQL Server, SQLite) and NoSQL (MongoDB, Firebase). I am currently complementing my industry work with specialized studies in Mobile Device Development at ISTEC Lisbon.
           </p>
         </div>
       </div>
