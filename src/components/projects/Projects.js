@@ -45,7 +45,7 @@ const Projects = () => {
           />
           <ProjectsCard
             title="VEX APP"
-            category="Android App (GoogleMaps API)"
+            category="Kotloin Android App (GoogleMaps API)"
             image={chargerapp}
             link="https://github.com/marcelorcramos/VexApp"
           />
@@ -57,7 +57,7 @@ const Projects = () => {
           />
           <ProjectsCard
             title="Contact List (CRUD)"
-            category="Android App (SQLITE & Firebase)"
+            category="Java Android App"
             image={Crud}
             link="https://github.com/marcelorcramos/ContactList-CRUD"
           />
@@ -76,13 +76,13 @@ const Projects = () => {
             link="https://github.com/marcelorcramos/Github-Scraper-PY"
           />
           <ProjectsCard
-            title="Projeto Centro De Saúde"
+            title="Health Center Project"
             category="LocalStorage Js Website"
             image={CentroSaude}
             link="https://github.com/marcelorcramos/ProjetoCentroDeSaude"
           />
           <ProjectsCard
-            title="Consumo de Energia"
+            title="Energy Consumption"
             category="Web App"
             image={ConsumoEnergia}
             link="https://github.com/marcelorcramos/ConsumoDeEnergia"
