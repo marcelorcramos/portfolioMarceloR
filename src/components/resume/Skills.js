@@ -15,14 +15,14 @@ const Skills = () => {
         {/* web Design */}
         <div className="py-4">
           <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Mobile Development</p>
+            <p className="text-base text-textColor -mb-1.5">Backend Development & APIs</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[95%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
           </div>
           {/* web Development */}
           <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Web Development</p>
+            <p className="text-base text-textColor -mb-1.5">Full-Stack Web Development</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[95%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
@@ -30,7 +30,7 @@ const Skills = () => {
           {/* Mobile Application */}
           <div className="py-3 border-b-[1px] border-zinc-800">
             <p className="text-base text-textColor -mb-1.5">
-              DataBase Management
+            Database Engineering
             </p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[85%] h-full absolute top-0 left-0 bg-designColor"></span>
@@ -38,7 +38,7 @@ const Skills = () => {
           </div>
           {/* UI Design */}
           <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Api's</p>
+            <p className="text-base text-textColor -mb-1.5">Mobile Solution Development</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[80%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
@@ -97,7 +97,7 @@ const Skills = () => {
           </div>
           {/* web Development */}
           <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Kotlin</p>
+            <p className="text-base text-textColor -mb-1.5">Python</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[90%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
@@ -108,28 +108,8 @@ const Skills = () => {
               <span className="w-[90%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
           </div>
-          {/* Mobile Application */}
           <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Swift</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[85%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* UI Design */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Python</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[85%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">C++</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[85%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">JavaScript</p>
+            <p className="text-base text-textColor -mb-1.5">TypeScript</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[85%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
@@ -147,49 +127,37 @@ const Skills = () => {
             <span className="text-designColor text-lg">
               <GiCheckMark />
             </span>
-            iOS and android apps
+            Backend Development
           </li>
           <li className="flex items-center gap-4 text-textColor">
             <span className="text-designColor text-lg">
               <GiCheckMark />
             </span>
-            Website development
+            API Design & Development
           </li>
           <li className="flex items-center gap-4 text-textColor">
             <span className="text-designColor text-lg">
               <GiCheckMark />
             </span>
-            DataBase
+            Database Architecture & Engineering 
           </li>
           <li className="flex items-center gap-4 text-textColor">
             <span className="text-designColor text-lg">
               <GiCheckMark />
             </span>
-            Machine Learning
+            Full-Stack Web Development 
           </li>
           <li className="flex items-center gap-4 text-textColor">
             <span className="text-designColor text-lg">
               <GiCheckMark />
             </span>
-            API'S introduction
+            Mobile Development Principles
           </li>
           <li className="flex items-center gap-4 text-textColor">
             <span className="text-designColor text-lg">
               <GiCheckMark />
             </span>
-            UX Design
-          </li>
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            Game Development
-          </li>
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            Ecommerce Design
+            System Integration & Architecture
           </li>
         </ul>
       </div>
