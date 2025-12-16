@@ -19,7 +19,7 @@ const Education = () => {
           badge="2023"
           title="Database Operator"
           subTitle="MicroCaos"
-          des="I was at MicroCaos as a store manager, where I learned a lot about Database."
+          des="I was at MicroCaos as a Database operator, where I learned a lot about Data structure."
         />
         <ResumeCard
           badge="2022 - 2023"
