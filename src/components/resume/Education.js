@@ -23,7 +23,7 @@ const Education = () => {
         />
         <ResumeCard
           badge="2022 - 2023"
-          title="Monday.com operator"
+          title="CRM Operator"
           subTitle="Goal Prime"
           des="I was responsible for introducing the Monday.com platform to the company Goal Prime, I worked with them for a year as a Free Lancer."
         />
