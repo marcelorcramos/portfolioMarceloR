@@ -19,13 +19,13 @@ const Education = () => {
           badge="2023"
           title="Database Operator"
           subTitle="MicroCaos"
-          des="I was at MicroCaos as a Database operator, where I learned a lot about Data structure."
+          des="I was at MicroCaos as a Database operator, where I learned a lot about Data structure. It was an internship"
         />
         <ResumeCard
           badge="2022 - 2023"
           title="CRM Operator"
           subTitle="Goal Prime"
-          des="I was responsible for introducing the Monday.com platform to the company Goal Prime, I worked with them for a year as a Free Lancer."
+          des="I was responsible for introducing the Monday.com (CRM Plataform) to the company Goal Prime, I worked with them for a year as a Free Lancer."
         />
       </div>
       <div className="w-full h-full hidden lgl:flex justify-center items-center">
