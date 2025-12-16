@@ -17,7 +17,7 @@ const Education = () => {
         />
         <ResumeCard
           badge="2023"
-          title="Store Manager"
+          title="Database Operator"
           subTitle="MicroCaos"
           des="I was at MicroCaos as a store manager, where I learned a lot about Database."
         />
