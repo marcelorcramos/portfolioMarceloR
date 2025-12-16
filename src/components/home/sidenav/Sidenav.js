@@ -38,7 +38,7 @@ const Sidenav = () => {
       </li>
       <li className="sidenavLi">
       <a href="https://github.com/marcelorcramos/ContactList-CRUD" target="_blank" rel="noopener noreferrer">
-        Contact List (CRUD)
+      Contact List (CRUD)
       </a>
       </li>
       <li className="sidenavLi">
@@ -48,12 +48,12 @@ const Sidenav = () => {
       </li>
       <li className="sidenavLi">
       <a href="https://github.com/marcelorcramos/ProjetoCentroDeSaude" target="_blank" rel="noopener noreferrer">
-      Projeto Centro De Saúde
+      Health Center Project
       </a>
       </li>
       <li className="sidenavLi">
       <a href="https://github.com/marcelorcramos/ConsumoDeEnergia" target="_blank" rel="noopener noreferrer">
-      Consumo de Energia
+      Energy Consumption
       </a>
       </li>
       </ul>
@@ -64,7 +64,7 @@ const Sidenav = () => {
       www.marceloramos.pt
       </a>
       </li>
-        <li className="sidenavLi">+351 *** *** ***</li>
+        <li className="sidenavLi">+351 931 470 356</li>
         <li className="sidenavLi">marcelorcramos@gmail.com</li>
       </ul>
     </div>
