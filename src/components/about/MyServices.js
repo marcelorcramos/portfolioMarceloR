@@ -12,7 +12,7 @@ const MyServices = () => {
         icons={<BiCodeAlt />}
         title="Backend Development & APIs"
         subTitle="One of the things I enjoy most in development is designing and building the core logic that powers applications. 
-        Working with backend technologies like C#, .NET, Java, and Python to create robust and scalable systems is where I thrive. 
+        Working with backend technologies like C#, Java, and Python to create robust and scalable systems is where I thrive. 
         I’m highly familiar with developing and consuming RESTful APIs, ensuring they are efficient, well-documented, and secure, enabling seamless communication between different parts of an application."
       />
       <ServicesCard
