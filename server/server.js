@@ -22,3 +22,21 @@ const db = new sqlite3.Database('./contacts.db', (err) => {
   }
 });
 
+db.serialize(() => {
+  db.run(`CREATE TABLE IF NOT EXISTS contacts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    message TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    read BOOLEAN DEFAULT 0
+  )
+  `, (err) => {
+    if (err) {
+      console.error('Could not create table', err.message);
+    } else {
+      console.log('Contacts table ready');
+    }
+  });
+});
+
