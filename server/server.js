@@ -186,5 +186,5 @@ app.listen(PORT, () => {
 });
 
 process.on('uncaughtException', (err) => {
-  console.error('Uncaught Exception:', err);
+console.error('Uncaught Exception:', err);
 });

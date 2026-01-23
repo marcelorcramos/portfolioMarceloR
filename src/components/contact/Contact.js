@@ -174,7 +174,7 @@ const Contact = () => {
         {successMsg ? (
           <div className="text-center p-6">
             <p className="text-xl font-titleFont text-designColor mb-4">
-              ✅ Mensagem Enviada!
+              Mensagem Enviada!
             </p>
             <p className="text-base text-gray-300">
               {successMsg}
@@ -186,7 +186,7 @@ const Contact = () => {
             {errorMsg && (
               <div className="bg-red-900/30 border border-red-700 rounded p-4">
                 <p className="text-red-300 text-center">
-                  ❌ {errorMsg}
+                  {errorMsg}
                 </p>
               </div>
             )}
@@ -252,11 +252,6 @@ const Contact = () => {
                 </>
               )}
             </button>
-            
-            {/* Dica de conexão */}
-            <p className="text-xs text-gray-500 text-center">
-              ℹ️ Certifique-se de que o servidor backend está rodando em http://localhost:5000
-            </p>
           </form>
         )}
       </div>
