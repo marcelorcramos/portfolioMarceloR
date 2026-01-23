@@ -77,14 +77,14 @@ app.post('/api/contact', (req, res) => {
 const stmt = db.prepare('INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)');
   stmt.run([name, email, message], function (err) {
     if (err) {
-      console.error('❌ Erro ao salvar no banco:', err);
+      console.error('Erro ao salvar no banco:', err);
       return res.status(500).json({ 
         success: false, 
         error: 'Erro ao salvar mensagem no banco de dados.' 
       });
     }
     
-    console.log('✅ Mensagem salva com ID:', this.lastID);
+    console.log('Mensagem salva com ID:', this.lastID);
     res.status(201).json({ 
       success: true, 
       id: this.lastID,
@@ -113,7 +113,7 @@ app.get('/api/contacts', (req, res) => {
         if (err) {
           res.json({
             success: true,
-            contatcs: rows
+            contacts: rows,
             total: rows.length
         });
       } else {
@@ -142,7 +142,7 @@ app.put('/api/contacts/:id/read', (req, res) => {
 
     res.json({
       success: true,
-      message: 'Message marked as read.'
+      message: 'Message marked as read.',
       changes: this.changes
     });
   });
