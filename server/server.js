@@ -40,3 +40,42 @@ db.serialize(() => {
   });
 });
 
+app.get('/api',(req, res) => {
+  res.json({
+    message: 'Marcelo Ramos Portfolio API',
+    status: 'online',
+    endpoints:[
+      'POST /api/contact - Enviar mensagem de contato',
+      'GET /api/contacts - Listar todas as mensagens',
+      'PUT /api/contacts/:id/read - Marcar como lida',
+      'DELETE /api/contacts/:id - Excluir mensagem'
+    ]
+  });
+});
+
+app.post('/api/contact', (req, res) => {
+  const { name, email, message } = req.body;
+
+  console.log('Received contact:', name, email, message);
+
+  if (!name || !email || !message) {
+    return res.status(400).json({
+      success: false,
+      error: 'Name, email, and message are required.'
+    });
+  }
+
+  const stmt = db.prepare('INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)');
+  stmt.run(name, email, message, function(err) {
+    if (err) {
+      console.error('Error inserting contact', err.message);
+      return res.status(500).json({
+        success: false,
+        id: this.lastID,
+        message: `Hello ${name}, Your message has been sent successfully. We will be in touch soon!`
+      });
+    });
+    stmt.finalize();
+});
+
+
