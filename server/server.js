@@ -3,6 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
+const { error } = require('console');
 
 const app = express();
 const PORT = 5000;
@@ -65,17 +66,125 @@ app.post('/api/contact', (req, res) => {
     });
   }
 
-  const stmt = db.prepare('INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)');
-  stmt.run(name, email, message, function(err) {
-    if (err) {
-      console.error('Error inserting contact', err.message);
-      return res.status(500).json({
-        success: false,
-        id: this.lastID,
-        message: `Hello ${name}, Your message has been sent successfully. We will be in touch soon!`
-      });
+  const emailRegex = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ 
+      success: false, 
+      error: 'Email inválido.' 
     });
-    stmt.finalize();
+  }
+
+const stmt = db.prepare('INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)');
+  stmt.run([name, email, message], function (err) {
+    if (err) {
+      console.error('❌ Erro ao salvar no banco:', err);
+      return res.status(500).json({ 
+        success: false, 
+        error: 'Erro ao salvar mensagem no banco de dados.' 
+      });
+    }
+    
+    console.log('✅ Mensagem salva com ID:', this.lastID);
+    res.status(201).json({ 
+      success: true, 
+      id: this.lastID,
+      message: `Olá ${name}, sua mensagem foi enviada com sucesso! Entrarei em contato em breve.`
+    });
+  });
+  stmt.finalize();
 });
 
+app.get('/api/contacts', (req, res) => {
+  const{ limit = 50, offset = 0 } = req.query;
 
+  db.all(
+    'SELECT * FROM contacts ORDER BY created_at DESC LIMIT ? OFFSET ?',
+    [limit, offset],
+    (err, rows) => {
+      if (err) {
+        console.error('Error fetching messages', err);
+        return res.status(500).json({
+          success: false,
+          error: 'Erro trying to fetch messages.'
+         });
+      }
+
+      db.get('SELECT COUNT(*) AS count FROM contacts', (err, count) => {
+        if (err) {
+          res.json({
+            success: true,
+            contatcs: rows
+            total: rows.length
+        });
+      } else {
+          res.json({
+            success: true,
+            contacts: rows,
+            total: count.total,
+            uread:rows.filter(r => !r.read).length
+          });
+      }
+    });
+  }
+  );
+});
+
+app.put('/api/contacts/:id/read', (req, res) => {
+  const { id } = req.params;
+
+  db.run('UPDATE contacts SET read = 1 WHERE id = ?', [id], function(err) {
+    if (err) {
+      return res.status(500).json({
+        success: false,
+        error: 'Error marking message as read.'
+      });
+    }
+
+    res.json({
+      success: true,
+      message: 'Message marked as read.'
+      changes: this.changes
+    });
+  });
+});
+
+app.delete('/api/contacts/:id', (req, res) => {
+  const { id } = req.params;
+
+  db.run('DELETE FROM contacts WHERE id = ?', [id], function(err) {
+    if (err) {
+      return res.status(500).json({
+        success: false,
+        error: 'Error deleting message.'
+      });
+    }
+    res.json({
+      success: true,
+      message: 'Message deleted successfully.',
+      changes: this.changes
+    });
+  });
+});
+
+app.get('/api/stats', (req, res) => {
+  db.get('SELECT COUNT(*) AS total, SUM(CASE WHEN read = 0 THEN 1 ELSE 0 END) AS unread FROM contacts', (err, stats) => {
+if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(stats);
+  });
+});
+
+app.get('/admin', (req, res) => {
+  res.sendFile(path.join(__dirname, 'admin.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Contact Endpoint: http://localhost:${PORT}/api/contact`);
+  console.log(`Admin Panel: http://localhost:${PORT}/admin`);
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+});
