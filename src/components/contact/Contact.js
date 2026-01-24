@@ -92,7 +92,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded font-semibold disabled:opacity-50"
+            className="bg-#edff20-600 hover:bg-#edff20-700 text-white p-3 rounded font-semibold disabled:opacity-50"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
