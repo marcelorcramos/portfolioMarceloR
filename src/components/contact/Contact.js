@@ -3,7 +3,7 @@ import axios from "axios";
 import { FiSend } from "react-icons/fi";
 import Title from "../home/Title";
 
-const ContactFINAL = () => {
+const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -107,4 +107,4 @@ const ContactFINAL = () => {
   );
 };
 
-export default ContactFINAL;
+export default Contact;
