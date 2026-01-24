@@ -1,190 +1,104 @@
 const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const path = require('path');
-const { error } = require('console');
+const { createClient } = require('@supabase/supabase-js');
 
 const app = express();
-const PORT = 5000;
+
+// Configuração do Supabase - DESENVOLVIMENTO LOCAL
+const supabaseUrl = 'https://pbmhbcloabrgksjiubun.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBibWhiY2xvYWJyZ2tzaml1YnVuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkyNzkxNjYsImV4cCI6MjA4NDg1NTE2Nn0.yQraSzvLiBnNakDqKcXPKHsfBNFsZq0hMNmZtf4J9WI';
+
+const supabase = createClient(supabaseUrl, supabaseKey);
+console.log('Supabase configurado para desenvolvimento');
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: '*',
   credentials: true
-}))
+}));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
 
-const db = new sqlite3.Database('./contacts.db', (err) => {
-  if (err) {
-    console.error('Could not connect to database', err.message);
-  } else {
-    console.log('Connected to SQLite database');
-  }
-});
-
-db.serialize(() => {
-  db.run(`CREATE TABLE IF NOT EXISTS contacts (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    email TEXT NOT NULL,
-    message TEXT NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    read BOOLEAN DEFAULT 0
-  )
-  `, (err) => {
-    if (err) {
-      console.error('Could not create table', err.message);
-    } else {
-      console.log('Contacts table ready');
-    }
-  });
-});
-
-app.get('/api',(req, res) => {
+// Rota de teste
+app.get('/api', (req, res) => {
   res.json({
-    message: 'Marcelo Ramos Portfolio API',
+    message: 'Marcelo Ramos Portfolio API - Supabase',
     status: 'online',
-    endpoints:[
+    endpoints: [
       'POST /api/contact - Enviar mensagem de contato',
-      'GET /api/contacts - Listar todas as mensagens',
-      'PUT /api/contacts/:id/read - Marcar como lida',
-      'DELETE /api/contacts/:id - Excluir mensagem'
+      'GET /api/contacts - Listar todas as mensagens (admin)',
+      'GET /api/health - Verificar saúde da API'
     ]
   });
 });
 
-app.post('/api/contact', (req, res) => {
+// Enviar mensagem
+app.post('/api/contact', async (req, res) => {
+  console.log('Recebendo contato:', req.body);
+  
   const { name, email, message } = req.body;
-
-  console.log('Received contact:', name, email, message);
 
   if (!name || !email || !message) {
     return res.status(400).json({
       success: false,
-      error: 'Name, email, and message are required.'
+      error: 'Nome, email e mensagem são obrigatórios.'
     });
   }
 
-  const emailRegex = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
-  if (!emailRegex.test(email)) {
-    return res.status(400).json({ 
-      success: false, 
-      error: 'Email inválido.' 
-    });
-  }
+  try {
+    const { data, error } = await supabase
+      .from('contacts')
+      .insert([
+        { 
+          name: name.trim(),
+          email: email.trim(),
+          message: message.trim()
+        }
+      ])
+      .select()
+      .single();
 
-const stmt = db.prepare('INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)');
-  stmt.run([name, email, message], function (err) {
-    if (err) {
-      console.error('Erro ao salvar no banco:', err);
-      return res.status(500).json({ 
-        success: false, 
-        error: 'Erro ao salvar mensagem no banco de dados.' 
-      });
+    if (error) {
+      console.error('Erro Supabase:', error);
+      throw error;
     }
+
+    console.log('Mensagem salva com ID:', data.id);
     
-    console.log('Mensagem salva com ID:', this.lastID);
     res.status(201).json({ 
       success: true, 
-      id: this.lastID,
-      message: `Olá ${name}, sua mensagem foi enviada com sucesso! Entrarei em contato em breve.`
+      id: data.id,
+      message: `Olá ${name}, sua mensagem foi enviada com sucesso!`
     });
-  });
-  stmt.finalize();
-});
 
-app.get('/api/contacts', (req, res) => {
-  const{ limit = 50, offset = 0 } = req.query;
-
-  db.all(
-    'SELECT * FROM contacts ORDER BY created_at DESC LIMIT ? OFFSET ?',
-    [limit, offset],
-    (err, rows) => {
-      if (err) {
-        console.error('Error fetching messages', err);
-        return res.status(500).json({
-          success: false,
-          error: 'Erro trying to fetch messages.'
-         });
-      }
-
-      db.get('SELECT COUNT(*) AS count FROM contacts', (err, count) => {
-        if (err) {
-          res.json({
-            success: true,
-            contacts: rows,
-            total: rows.length
-        });
-      } else {
-          res.json({
-            success: true,
-            contacts: rows,
-            total: count.total,
-            uread:rows.filter(r => !r.read).length
-          });
-      }
+  } catch (error) {
+    console.error('Erro ao salvar:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: 'Erro ao processar sua mensagem.'
     });
   }
-  );
 });
 
-app.put('/api/contacts/:id/read', (req, res) => {
-  const { id } = req.params;
-
-  db.run('UPDATE contacts SET read = 1 WHERE id = ?', [id], function(err) {
-    if (err) {
-      return res.status(500).json({
-        success: false,
-        error: 'Error marking message as read.'
-      });
-    }
+// Health check
+app.get('/api/health', async (req, res) => {
+  try {
+    const { error } = await supabase
+      .from('contacts')
+      .select('id')
+      .limit(1);
 
     res.json({
-      success: true,
-      message: 'Message marked as read.',
-      changes: this.changes
+      status: 'healthy',
+      database: error ? 'disconnected' : 'connected',
+      timestamp: new Date().toISOString()
     });
-  });
-});
-
-app.delete('/api/contacts/:id', (req, res) => {
-  const { id } = req.params;
-
-  db.run('DELETE FROM contacts WHERE id = ?', [id], function(err) {
-    if (err) {
-      return res.status(500).json({
-        success: false,
-        error: 'Error deleting message.'
-      });
-    }
-    res.json({
-      success: true,
-      message: 'Message deleted successfully.',
-      changes: this.changes
+  } catch (error) {
+    res.status(500).json({
+      status: 'unhealthy',
+      error: error.message
     });
-  });
+  }
 });
 
-app.get('/api/stats', (req, res) => {
-  db.get('SELECT COUNT(*) AS total, SUM(CASE WHEN read = 0 THEN 1 ELSE 0 END) AS unread FROM contacts', (err, stats) => {
-if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json(stats);
-  });
-});
-
-app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname, 'admin.html'));
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-  console.log(`Contact Endpoint: http://localhost:${PORT}/api/contact`);
-  console.log(`Admin Panel: http://localhost:${PORT}/admin`);
-});
-
-process.on('uncaughtException', (err) => {
-console.error('Uncaught Exception:', err);
-});
+// Para Vercel Serverless
+module.exports = app;
