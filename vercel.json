@@ -6,11 +6,19 @@
       "config": {
         "distDir": "build"
       }
+    },
+    {
+      "src": "server/server.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "handle": "filesystem"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/server.js"
     },
     {
       "src": "/(.*)",

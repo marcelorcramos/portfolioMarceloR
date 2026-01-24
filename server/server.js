@@ -5,15 +5,19 @@ const { createClient } = require('@supabase/supabase-js');
 
 const app = express();
 
-// Configuração do Supabase - DESENVOLVIMENTO LOCAL
-const supabaseUrl = 'https://pbmhbcloabrgksjiubun.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBibWhiY2xvYWJyZ2tzaml1YnVuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkyNzkxNjYsImV4cCI6MjA4NDg1NTE2Nn0.yQraSzvLiBnNakDqKcXPKHsfBNFsZq0hMNmZtf4J9WI';
+// Configuração do Supabase - PRODUÇÃO (variáveis de ambiente)
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_KEY;
+
+if (!supabaseUrl || !supabaseKey) {
+  console.warn('AVISO: SUPABASE_URL ou SUPABASE_KEY não configurados.');
+  console.warn('No Vercel, configure as Environment Variables.');
+}
 
 const supabase = createClient(supabaseUrl, supabaseKey);
-console.log('Supabase configurado para desenvolvimento');
 
 app.use(cors({
-  origin: '*',
+  origin: ['https://marceloramos.pt', 'http://localhost:3000'],
   credentials: true
 }));
 app.use(bodyParser.json());
@@ -23,6 +27,7 @@ app.get('/api', (req, res) => {
   res.json({
     message: 'Marcelo Ramos Portfolio API - Supabase',
     status: 'online',
+    database: supabaseUrl ? 'configurado' : 'não configurado',
     endpoints: [
       'POST /api/contact - Enviar mensagem de contato',
       'GET /api/contacts - Listar todas as mensagens (admin)',
