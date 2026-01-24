@@ -1,0 +1,4 @@
+﻿api/
+server/
+*.db
+.env
