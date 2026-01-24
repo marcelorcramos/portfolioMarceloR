@@ -9,7 +9,7 @@ import Left from "./components/home/Left";
 import About from "./components/about/About";
 import Resume from "./components/resume/Resume";
 import Projects from "./components/projects/Projects";
-import Contact from "./components/contact/Contact-FINAL";
+import Contact from "./components/contact/Contact";
 import Sidenav from "./components/home/sidenav/Sidenav";
 
 const Home = () => {
