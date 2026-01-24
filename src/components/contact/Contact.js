@@ -9,7 +9,7 @@ const Contact = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  const API_URL = "https://api.marceloramos.pt/contact";
+  const API_URL = "https://api.marceloramos.pt/api/contact";
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
