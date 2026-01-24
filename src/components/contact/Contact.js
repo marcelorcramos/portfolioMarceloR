@@ -80,7 +80,7 @@ const Contact = () => {
     
     try {
       // ENVIAR PARA SEU BACKEND (mudei aqui!)
-      const response = await axios.post('http://localhost:5000/api/contact', {
+      const response = await axios.post('https://api.marceloramos.pt/contact', {
         name: clientName,
         email: email,
         message: messages,
