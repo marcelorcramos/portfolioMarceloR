@@ -9,13 +9,6 @@ import CV from "../../assets/MarceloRamosCV2026ENG2.pdf";
 import MR2 from "../../assets/MarceloRamosProfessional.jpeg";
 
 const Left = () => {
-  useEffect(() => {
-    setTimeout(() => {
-      window.open("https://github.com/marcelorcramos", "_blank");
-      window.open("https://www.linkedin.com/in/marcelorcramos/", "_blank");
-      window.open("mailto:marcelorcramos@gmail.com", "_blank");
-    }, 1000);
-  }, []);
 
   const [text] = useTypewriter({
     words: ["Mobile Developer", "Full-Stack Web Developer", "DataBase Management"],
