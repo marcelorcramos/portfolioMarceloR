@@ -3,6 +3,7 @@ import axios from "axios";
 import { FiSend } from "react-icons/fi";
 import Title from "../home/Title";
 
+//Estados
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
@@ -11,11 +12,13 @@ const Contact = () => {
 
   const API_URL = "https://api.marceloramos.pt/api/contact";
 
+  // Manipula mudanças
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setError("");
   };
 
+  // Envia formulário
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (loading) return;
@@ -28,6 +31,7 @@ const Contact = () => {
       console.log("Enviando para:", API_URL);
       console.log("Dados:", form);
       
+      // Requisição API
       const response = await axios.post(API_URL, form, {
         headers: { "Content-Type": "application/json" },
         timeout: 15000
@@ -42,6 +46,7 @@ const Contact = () => {
     } catch (err) {
       console.error("Erro:", err);
       
+      // erros
       if (err.code === "ERR_NETWORK") {
         setError(`Erro de rede. Verifique: ${API_URL}`);
       } else if (err.response) {
