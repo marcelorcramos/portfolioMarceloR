@@ -12,21 +12,30 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Sidenav from "./components/home/sidenav/Sidenav";
 
+//Gerencia Estados
 const Home = () => {
   const [about, setAbout] = useState(true);
   const [resume, setResume] = useState(false);
   const [projects, setProjects] = useState(false);
   const [contact, setContact] = useState(false);
   const [sidenav, setSidenav] = useState(false);
+//Referencia elemento DOM do menu
   const ref = useRef();
 
+//Listener para identificar cliques fora
   useEffect(() => {
-    document.body.addEventListener("click", (e) => {
-      if (e.target.contains(ref.current)) {
-        setSidenav(false);
-      }
-    });
-  }, []);
+  const handleClickOutside = (e) => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      setSidenav(false);
+    }
+  };
+
+  document.body.addEventListener("click", handleClickOutside);
+  
+  return () => {
+    document.body.removeEventListener("click", handleClickOutside);
+  };
+}, []);
   return (
     <div className="w-full lgl:w-[85%] h-full lgl:h-[85%] bg-transparent text-white z-50 flex items-start justify-between p-4 lgl:p-0">
       {/* ================= Left Icons End here ======================== */}
