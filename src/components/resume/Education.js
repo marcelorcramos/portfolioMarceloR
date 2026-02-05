@@ -25,7 +25,7 @@ const Education = () => {
           badge="2023"
           title="Database Operator Intern"
           subTitle="MicroCaos"
-          des="I was at MicroCaos as a Database operator, where I learned a lot about Data structure. It was an internship"
+          des="I was at MicroCaos as a Database operator, where I learned a lot about Data structure."
         />
       </div>
       <div className="w-full h-full hidden lgl:flex justify-center items-center">
