@@ -11,21 +11,21 @@ const Education = () => {
         <ResumeTitle title="Experience" icon={<MdWork />} />
         <ResumeCard
           badge=""
+          title="Software Engineer Intern"
+          subTitle="Capgemini Engineering"
+          des="I currently work as a software engineer at Capgemini Engineering."
+        />
+        <ResumeCard
+          badge="2024 - 2026"
           title="Programming Teacher"
           subTitle="Happy Code"
-          des="I currently work as a programming teacher for young talents. It's a part-time job."
+          des="I worked as a programming teacher for young talents."
         />
         <ResumeCard
           badge="2023"
-          title="Database Operator"
+          title="Database Operator Intern"
           subTitle="MicroCaos"
           des="I was at MicroCaos as a Database operator, where I learned a lot about Data structure. It was an internship"
-        />
-        <ResumeCard
-          badge="2022 - 2023"
-          title="CRM Operator"
-          subTitle="Goal Prime"
-          des="I was responsible for introducing the Monday.com (CRM Plataform) to the company Goal Prime, I worked with them for a year as a Free Lancer."
         />
       </div>
       <div className="w-full h-full hidden lgl:flex justify-center items-center">
